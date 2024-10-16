@@ -1,22 +1,25 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.13.0
   creationTimestamp: null
-  name: alloydbomnioperators.charts.docker.io
+  labels:
+    alloydb-omni: "true"
+  name: lrojobs.alloydbomni.internal.dbadmin.goog
 spec:
-  group: charts.docker.io
+  group: alloydbomni.internal.dbadmin.goog
   names:
-    kind: AlloydbomniOperator
-    listKind: AlloydbomniOperatorList
-    plural: alloydbomnioperators
-    singular: alloydbomnioperator
+    kind: LROJob
+    listKind: LROJobList
+    plural: lrojobs
+    singular: lrojob
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - name: v1
     schema:
       openAPIV3Schema:
-        description: AlloydbomniOperator is the Schema for the alloydbomnioperators
-          API
+        description: LROJob is an internal object that helps single-thread LRO jobs.
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -31,18 +34,14 @@ spec:
           metadata:
             type: object
           spec:
-            description: Spec defines the desired state of AlloydbomniOperator
+            properties:
+              lroName:
+                description: LROName is the name for the LRO
+                type: string
             type: object
-            x-kubernetes-preserve-unknown-fields: true
-          status:
-            description: Status defines the observed state of AlloydbomniOperator
-            type: object
-            x-kubernetes-preserve-unknown-fields: true
         type: object
     served: true
     storage: true
-    subresources:
-      status: {}
 status:
   acceptedNames:
     kind: ""
