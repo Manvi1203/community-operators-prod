@@ -342,7 +342,7 @@ metadata:
     categories: Database
     operators.operatorframework.io/internal-objects: '["backuprepositories.alloydbomni.internal.dbadmin.goog", "failovers.alloydbomni.internal.dbadmin.goog", "instancebackupplans.alloydbomni.internal.dbadmin.goog","instancebackups.alloydbomni.internal.dbadmin.goog","instancerestores.alloydbomni.internal.dbadmin.goog","instances.alloydbomni.internal.dbadmin.goog","instanceswitchovers.alloydbomni.internal.dbadmin.goog","instanceuserdefinedauthentications.alloydbomni.internal.dbadmin.goog","lrojobs.alloydbomni.internal.dbadmin.goog","replicationconfigs.alloydbomni.internal.dbadmin.goog","sidecars.alloydbomni.internal.dbadmin.goog","createstandbyjobs.alloydbomni.internal.dbadmin.goog","deletestandbyjobs.alloydbomni.internal.dbadmin.goog"]'
     operatorframework.io/suggested-namespace: alloydb-omni-system
-  name: alloydbomni-operator.v1.5.0
+  name: alloydb-omni-operator.v1.5.0
   namespace: placeholder
   labels:
     operatorframework.io/arch.amd64: supported
@@ -2476,4 +2476,4 @@ spec:
       type: ValidatingAdmissionWebhook
       webhookPath: /validate-alloydbomni-dbadmin-goog-v1-userdefinedauthentication
   minKubeVersion: 1.21.0
-  replaces: alloydbomni-operator.v1.4.1
+  replaces: alloydb-omni-operator.v1.4.1
