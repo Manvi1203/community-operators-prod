@@ -540,8 +540,6 @@ spec:
     Replace the following:
     * `NAMESPACE` : the namespace where you have installed your operator. Suggested namespace: `alloydb-omni-system`.
 
-    If you are using Red Hat OpenShift, proceed with following [these][post-installation] steps after installing the operator.
-
     ## Creating a database cluster
 
     After you install the AlloyDB Omni operator on your Kubernetes cluster, you can create an AlloyDB Omni database cluster. For each database cluster you create, you must first create a password secret using the following format:
@@ -567,7 +565,6 @@ spec:
     ## Connect to AlloyDB Omni running on Kubernetes
     Follow [these][connect] steps to connect to AlloyDB Omni.
 
-    [post-installation]: https://cloud.google.com/alloydb/omni/docs/deploy-kubernetes#rhel-openshift
     [database-cluster]: https://cloud.google.com/alloydb/omni/docs/deploy-kubernetes#create
     [connect]: https://cloud.google.com/alloydb/omni/docs/run-connect#connect-kubernetes
   displayName: AlloyDB Omni Operator
